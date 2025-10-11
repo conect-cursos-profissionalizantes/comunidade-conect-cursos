@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { Orbitron } from "next/font/google";
+import Image from 'next/image'
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -21,10 +22,13 @@ export function Hero() {
         
         {/* Imagem fixa para telas mobile */}
         <div className="flex-1 h-auto lg:hidden">
-          <img
+            <Image
             src="./images/image-hero.svg"
             alt="Imagem principal - uma jovem estudante sorrindo"
+            width={500}
+            height={500}
             className="mx-auto w-full"
+            loading="eager"
           />
         </div>
 
@@ -64,10 +68,13 @@ export function Hero() {
 
         {/* Imagem fixa para telas grandes */}
         <div className="flex-1 h-auto hidden lg:block">
-          <img
+            <Image
             src="./images/image-hero.svg"
             alt="Imagem principal - uma jovem estudante sorrindo"
+            width={500}
+            height={500}
             className="mx-auto w-full"
+            loading="eager"
           />
         </div>
       </div>
