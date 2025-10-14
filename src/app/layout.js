@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-cyan-50 bg-primary`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-cyan-50 bg-primary overflow-x-hidden`}
       >
         <AosProvider>
           {children}
