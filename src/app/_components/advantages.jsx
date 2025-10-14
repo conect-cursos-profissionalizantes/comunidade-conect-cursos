@@ -28,7 +28,7 @@ export function Advantages() {
                     </div>
                 </div>
 
-                <div className="mt-4" data-aos="fade-up"  data-aos-duration="800">
+                <div className="mt-4">
                     <CardAdvantages />
                 </div>
             </div>

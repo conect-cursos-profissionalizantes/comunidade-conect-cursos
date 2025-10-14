@@ -76,7 +76,8 @@ export function CardsCourses() {
       {courses.map((course, index) => (
         <div
           key={index}
-          className="p-4 rounded-md w-[300px] shadow-md bg-gray-900 flex flex-col justify-between">
+          className="p-4 rounded-md w-[300px] shadow-md bg-gray-900 flex flex-col justify-between"
+          data-aos="fade-up"  data-aos-duration="800">
           <div>
             {course.image}
             <div>

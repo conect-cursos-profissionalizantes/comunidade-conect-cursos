@@ -28,7 +28,7 @@ export function CardAdvantages() {
         <div className="h-auto grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
             {
                 advantages.map((advantages, index) => (
-                    <div key={index} className="flex justify-between w-auto h-auto m-2 p-4 rounded-md shadow bg-white">
+                    <div key={index} className="flex justify-between w-auto h-auto m-2 p-4 rounded-md shadow bg-white" data-aos="fade-up"  data-aos-duration="800">
                         <div className="w-[20%] h-full">
                             {advantages.image}
                         </div>
