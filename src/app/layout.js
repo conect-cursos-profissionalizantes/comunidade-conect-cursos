@@ -1,10 +1,6 @@
-'use client'
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css"; 
+import AosProvider from "./_components/aosProvider.js";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,24 +12,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
+export const metadata = {
+  title: "Conect Cursos Profissionalizantes",
+  description: "Entre para a comunidade e vem ser Conect!!",
+};
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true,
-    });
-    AOS.refresh();
-  }, []);
-
-
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-cyan-50 bg-primary overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-cyan-50 bg-primary`}
       >
-        {children}
+        <AosProvider>
+          {children}
+        </AosProvider>
       </body>
     </html>
   );

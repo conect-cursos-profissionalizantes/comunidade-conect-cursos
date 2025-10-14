@@ -73,7 +73,7 @@ export function Hero() {
                 className="inline-flex items-center gap-2 text-white px-10 py-2 rounded font-bold bg-green-700 hover:bg-green-800 active:bg-green-800 md:active:bg-green-700 animate-wave"
               >
                 ENTRE AGORA E TIRE SUAS DÚVIDAS!
-                <Image src="./images/whatsapp-theme-white.svg" alt="Botão Entre para a comunidade" className="w-[30px]" />
+                <img src="./images/whatsapp-theme-white.svg" alt="Botão Entre para a comunidade"  />
               </Link>
             </div>
           </div>
