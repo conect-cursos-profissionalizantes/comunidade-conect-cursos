@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import Link from 'next/link';
+import Link from "next/link";
 
 const courses = [
     "Informática básica",
@@ -7,7 +7,6 @@ const courses = [
     "Atendente de Farmácia",
     "Rotinas Administrativas",
     "Hotelaria",
-    
   ];
 
 const options = [
@@ -27,7 +26,6 @@ export function Footer() {
                         <p className="pt-2 text-gray-400">Transformando vidas através da educação profissionalizante de qualidade há mais de 10 anos.</p>
 
                         <ul className="flex pt-4 gap-3">
-                            <li><img src="./images/facebook.png" alt="facebook" className="w-[28px] h-[28px]"/></li>
                             <li><Link href="https://www.instagram.com/conect_cursos/"><img src="./images/instagram.png" alt="instagram" className="w-[28px] h-[28px]"/></Link></li>
                             <li><Link href="https://api.whatsapp.com/send/?phone=5582999838355&text&type=phone_number&app_absent=0"><img src="./images/whatsapp-theme-white.png" alt="Ícone do WhatsApp na cor branca" className="w-[28px] h-[28px]"/></Link></li>
                         </ul>
