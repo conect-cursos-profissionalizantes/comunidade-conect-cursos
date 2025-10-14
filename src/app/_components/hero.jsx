@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
-  weight: "800"
+  weight: "800",
 })
 
 const features = [
