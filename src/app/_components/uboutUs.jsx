@@ -1,4 +1,5 @@
 import { CircleCheckBig } from "lucide-react";
+import Image from "next/image";
 
 const skills = [
             "Professores com experiência no mercado",
@@ -12,17 +13,17 @@ export function AboutUs() {
     return (
         <section className="flex justify-center items-center h-auto" id="about-us">
             <div className="h-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
+                <div className="text-center" data-aos="fade-up" data-aos-duration="800">
                     <h1 className="font-sans text-3xl font-bold pt-10">Sobre <span className="text-green-600">nós</span></h1>
                 </div>
 
-                <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-6 pt-6">
-                    <div>
-                        <img
+                <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-6 pt-6" data-aos="fade-up"  data-aos-duration="800">
+                    <div data-aos="fade-up" data-aos-duration="800">
+                        <Image
                             src="./images/girl-using-computer.svg"
-                            alt="Garota usando um computador" className="w-[600px] h-[400px]"/>
+                            alt="Garota usando um computador" width={500} height={500}/>
                     </div>
-                    <div>
+                    <div data-aos="fade-up" data-aos-duration="800">
                         <h2 className="w-auto text-2xl">Referência em formação profissional há mais de 10 anos</h2>
 
                         <p className="pt-4">

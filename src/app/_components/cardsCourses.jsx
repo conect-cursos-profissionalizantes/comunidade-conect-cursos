@@ -71,12 +71,13 @@ const courses = [
 
 export function CardsCourses() {
   return (
-    <div className="grid grid-cols-1 justify-items-center sm:grid-cols-3 md:justify-items-center xl:grid-cols-3 gap-4 mt-8"> 
+    <div className="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:justify-items-center xl:grid-cols-3 gap-4 mt-8"> 
 
       {courses.map((course, index) => (
         <div
           key={index}
-          className="p-4 rounded-md w-[300px] shadow-md bg-gray-900 flex flex-col justify-between">
+          className="p-4 rounded-md w-[300px] shadow-md bg-gray-900 flex flex-col justify-between"
+          data-aos="fade-up" data-aos-duration="800">
           <div>
             {course.image}
             <div>
