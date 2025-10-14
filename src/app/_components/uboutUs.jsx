@@ -1,4 +1,5 @@
 import { CircleCheckBig } from "lucide-react";
+import Image from "next/image";
 
 const skills = [
             "Professores com experiência no mercado",
@@ -18,7 +19,7 @@ export function AboutUs() {
 
                 <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-6 pt-6" data-aos="fade-up"  data-aos-duration="800">
                     <div data-aos="fade-up"  data-aos-duration="800">
-                        <img
+                        <Image
                             src="./images/girl-using-computer.svg"
                             alt="Garota usando um computador" className="w-[600px] h-[400px]"/>
                     </div>
