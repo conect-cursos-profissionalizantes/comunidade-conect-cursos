@@ -71,7 +71,7 @@ const courses = [
 
 export function CardsCourses() {
   return (
-    <div className="grid grid-cols-1 justify-items-center sm:grid-cols-3 md:justify-items-center xl:grid-cols-3 gap-4 mt-8"> 
+    <div className="grid grid-cols-1 justify-items-center sm:grid-cols-3 md:justify-items-center xl:grid-cols-3 gap-4 mt-8" data-aos="fade-up"  data-aos-duration="800"> 
 
       {courses.map((course, index) => (
         <div

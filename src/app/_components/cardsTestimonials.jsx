@@ -39,8 +39,7 @@ export function CardsTestimonials() {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6"
-        >
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6" data-aos="fade-up"  data-aos-duration="800">
           <div className="flex items-center gap-4 mb-4">
             <img
               src={testimonial.image}

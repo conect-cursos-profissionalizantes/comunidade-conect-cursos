@@ -1,7 +1,10 @@
+'use client'
+
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { Orbitron } from "next/font/google";
-import Image from 'next/image'
+import { ImageHero } from "./imageHero";
+import { useState, useEffect } from 'react';
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -15,24 +18,33 @@ const features = [
 ];
 
 export function Hero() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Isso garante que o estado mude APENAS após a montagem inicial do lado do cliente
+    setIsMounted(true);
+  }, []);
+
+  // Define a classe de entrada condicionalmente
+  const heroTextClasses = isMounted 
+    ? "animate-in slide-in-from-left duration-1000" // Com animação
+    : "opacity-0 translate-x-[-100%]"; // Posição inicial escondida
+
+  const heroImageClasses = isMounted 
+    ? "animate-in slide-in-from-right duration-1000" // Com animação
+    : "opacity-0 translate-x-[100%]"; // Posição inicial escondida
+
   return (
     <section className="h-auto w-full flex justify-center items-center">
       {/*Conteúdo principal */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:flex lg:px-8">
         
         {/* Imagem fixa para telas mobile */}
-        <div className="flex-1 h-auto lg:hidden">
-            <Image
-            src="./images/image-hero.svg"
-            alt="Imagem principal - uma jovem estudante sorrindo"
-            width={500}
-            height={500}
-            className="mx-auto w-full"
-            loading="eager"
-          />
+        <div className={`flex-1 h-auto lg:hidden animate-in slide-in-from-right  duration-1000 ${heroImageClasses}`}>
+            <ImageHero/>
         </div>
 
-        <div className="flex-1 flex items-center">
+        <div className={`flex-1 flex items-center animate-in slide-in-from-left  duration-1000 ${heroTextClasses}`}>
           <div className="grid grid-cols-1 text-center gap-2 lg:text-left">
             <h1 className={`${orbitron.className} text-3xl m-auto md:text-4xl font-bold leading-snug text-white`}>
               <span className="text-green-500">Conecte-se</span> à melhor instituição
@@ -67,15 +79,8 @@ export function Hero() {
         </div>
 
         {/* Imagem fixa para telas grandes */}
-        <div className="flex-1 h-auto hidden lg:block">
-            <Image
-            src="./images/image-hero.svg"
-            alt="Imagem principal - uma jovem estudante sorrindo"
-            width={500}
-            height={500}
-            className="mx-auto w-full"
-            loading="eager"
-          />
+        <div className={`flex-1 h-auto hidden lg:block animate-in slide-in-from-right  duration-1000 ${heroImageClasses}`}>
+            <ImageHero/>
         </div>
       </div>
     </section>

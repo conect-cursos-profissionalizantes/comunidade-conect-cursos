@@ -5,7 +5,7 @@ export function Advantages() {
         <section className="flex justify-center items-center w-full h-auto"
             id="advantages">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 xl:grid-cols-2 pt-18">
-                <div className="">
+                <div data-aos="fade-up"  data-aos-duration="800">
                     <h2 className="font-sans tex-center text-2xl font-bold">
                         Vantagens exclusivas para membros da nossa <span className="text-green-700"> comunidade</span>
                     </h2>
@@ -28,7 +28,7 @@ export function Advantages() {
                     </div>
                 </div>
 
-                <div className="mt-4">
+                <div className="mt-4" data-aos="fade-up"  data-aos-duration="800">
                     <CardAdvantages />
                 </div>
             </div>

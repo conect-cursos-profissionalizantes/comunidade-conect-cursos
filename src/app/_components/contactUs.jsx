@@ -6,11 +6,11 @@ export function ContactUs() {
     return (
         <section className="flex justify-center items-center w-full h-auto pb-28" id="contact-us">
             <div className="w-full h-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="text-center">
+                <div className="text-center" data-aos="fade-up"  data-aos-duration="800">
                     <h1 className="font-sans pt-10 text-3xl font-bold">Fale <span className="text-green-600">conosco</span></h1>
                     <p className='pt-2'>Estamos prontos para atender você e tirar todas as <br/> suas dúvidas sobre nossos cursos profissionalizantes.</p>
                 </div>
-                <div className="grid grid-cols-1 justify-center lg:flex xl:flex pt-8">
+                <div className="grid grid-cols-1 justify-center lg:flex xl:flex pt-8" data-aos="fade-up"  data-aos-duration="800">
                     <div className="lg:w-1/2">
                         <Form/>
                     </div>
