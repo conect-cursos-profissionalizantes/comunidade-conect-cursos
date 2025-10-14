@@ -22,7 +22,7 @@ export function Hero() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Isso garante que o estado mude APENAS após a montagem inicial do lado do cliente
+    // Isso garante que o estado mude APENAS após a montagem inicial do lado do cliente.
     setIsMounted(true);
   }, []);
 
