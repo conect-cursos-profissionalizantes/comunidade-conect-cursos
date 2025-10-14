@@ -1,5 +1,6 @@
 import { CardAdvantages } from "./cardsAdvantages"
 import Image from "next/image";
+import WhatsAppIcon from "../../../public/images/whatsapp.png";
 
 export function Advantages() {
     return (
@@ -18,7 +19,7 @@ export function Advantages() {
                     <div className="w-auto xl:mr-10 flex p-6 rounded-2xl border-l-4 border-x-green-700 shadow mt-6 bg-white">
 
                         <div>
-                            <img src="./images/whatsapp.png" alt="Comunidade" className="w-[120px]" />
+                            <Image src={WhatsAppIcon} alt="Comunidade" className="w-[120px]" />
                         </div>
                         <div className="text-cyan-950 ml-4">
                             <h3 className="text-black font-bold">Comunidade ativa</h3>

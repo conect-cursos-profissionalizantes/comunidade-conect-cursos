@@ -1,6 +1,8 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import InstagramIcon from "../../../public/images/instagram.png";
+import WhatsAppIcon from "../../../public/images/whatsapp-theme-white.png"; 
 
 const courses = [
     "Informática básica",
@@ -8,7 +10,7 @@ const courses = [
     "Atendente de Farmácia",
     "Rotinas Administrativas",
     "Hotelaria",
-  ];
+];
 
 const options = [
     { label: 'Cursos', id: 'courses' },
@@ -27,8 +29,12 @@ export function Footer() {
                         <p className="pt-2 text-gray-400">Transformando vidas através da educação profissionalizante de qualidade há mais de 10 anos.</p>
 
                         <ul className="flex pt-4 gap-3">
-                            <li><Link href="https://www.instagram.com/conect_cursos/"><img src="./images/instagram.png" alt="instagram" className="w-[28px] h-[28px]"/></Link></li>
-                            <li><Link href="https://api.whatsapp.com/send/?phone=5582999838355&text&type=phone_number&app_absent=0"><img src="./images/whatsapp-theme-white.png" alt="Ícone do WhatsApp na cor branca" className="w-[28px] h-[28px]"/></Link></li>
+                            <li>
+                                <Link href="https://www.instagram.com/conect_cursos/">
+                                    <Image src={InstagramIcon} alt="Ícone do Instagram na cor branca" width={28} height={28} />
+                                </Link>
+                            </li>
+                            <li><Link href="https://api.whatsapp.com/send/?phone=5582999838355&text&type=phone_number&app_absent=0"><Image src={WhatsAppIcon} alt="Ícone do WhatsApp na cor branca" width={28} height={28} /></Link></li>
                         </ul>
                     </div>
 
@@ -64,23 +70,23 @@ export function Footer() {
                         <ul className="pt-2 text-gray-400">
                             <li className="flex items-center gap-2">
                                 <Link href="https://maps.app.goo.gl/Fzy7935Q7vnJEzyUA">
-                                    <MapPin color="green" size={24}/>
+                                    <MapPin color="green" size={24} />
                                 </Link>
-                                    <div>
-                                        <adress>Rua Esperidião Rodrigues <br/> nº 41-Centro- Arapiraca/AL</adress>
-                                    </div>
+                                <div>
+                                    <adress>Rua Esperidião Rodrigues <br /> nº 41-Centro- Arapiraca/AL</adress>
+                                </div>
                             </li>
                             <li className="flex items-center gap-2 pt-2">
-                                <Phone color="green" size={24}/> 
+                                <Phone color="green" size={24} />
                                 <span>3522-1166</span>
                             </li>
                             <li className="flex items-center gap-2 pt-2">
-                                <Mail color="green" size={24}/> <span>lp.conectcursos@gmail.com</span>
+                                <Mail color="green" size={24} /> <span>lp.conectcursos@gmail.com</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <hr className="border-gray-600"/>
+                <hr className="border-gray-600" />
                 <div className="text-center text-sm text-white pt-4 pb-6">
                     <p>&copy; {new Date().getFullYear()} Conect Cursos Profissionalizantes. Todos os direitos reservados.</p>
                 </div>

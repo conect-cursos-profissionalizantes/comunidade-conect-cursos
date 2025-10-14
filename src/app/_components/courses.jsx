@@ -1,5 +1,4 @@
 import { CardsCourses } from "./cardsCourses.jsx";
-import Image from "next/image.js";
 
 export function Courses() {
     return (

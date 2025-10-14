@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Orbitron } from "next/font/google";
 import { ImageHero } from "./imageHero";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -41,11 +41,11 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:flex lg:px-8">
         
         {/* Imagem fixa para telas mobile */}
-        <div className={`flex-1 h-auto lg:hidden animate-in slide-in-from-right  duration-1000 ${heroImageClasses}`}>
+        <div className={`flex-1 h-auto lg:hidden animate-in slide-in-from-right duration-1000 ${heroImageClasses}`}>
             <ImageHero/>
         </div>
 
-        <div className={`flex-1 flex items-center animate-in slide-in-from-left  duration-1000 ${heroTextClasses}`}>
+        <div className={`flex-1 flex items-center animate-in slide-in-from-left duration-1000 ${heroTextClasses}`}>
           <div className="grid grid-cols-1 text-center gap-2 lg:text-left">
             <h1 className={`${orbitron.className} text-3xl m-auto md:text-4xl font-bold leading-snug text-white`}>
               <span className="text-green-500">Conecte-se</span> à melhor instituição
@@ -73,14 +73,14 @@ export function Hero() {
                 className="inline-flex items-center gap-2 text-white px-10 py-2 rounded font-bold bg-green-700 hover:bg-green-800 active:bg-green-800 md:active:bg-green-700 animate-wave"
               >
                 ENTRE AGORA E TIRE SUAS DÚVIDAS!
-                <img src="./images/whatsapp-theme-white.svg" alt="Botão Entre para a comunidade"  />
+                <Image src="./images/whatsapp-theme-white.svg" alt="Botão Entre para a comunidade" width={30} height={30}/>
               </Link>
             </div>
           </div>
         </div>
 
         {/* Imagem fixa para telas grandes */}
-        <div className={`flex-1 h-auto hidden lg:block animate-in slide-in-from-right  duration-1000 ${heroImageClasses}`}>
+        <div className={`flex-1 h-auto hidden lg:block animate-in slide-in-from-right duration-1000 ${heroImageClasses}`}>
             <ImageHero/>
         </div>
       </div>

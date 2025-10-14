@@ -1,10 +1,14 @@
 import Image from "next/image";
+import AnaImage from "../../../public/images/ana.jpg";
+import CatImage from "../../../public/images/cat.jpg"; 
+import CarlaImage from "../../../public/images/carla.jpg";
+import RobertoImage from "../../../public/images/roberto.jpg";
 
 const testimonials = [
   {
     name: "Aninha",
     role: "Assistente Administrativo",
-    image: "./images/ana.jpg",
+    image: AnaImage,
     rating: "★★★★★",
     testimonial:
       "Os cursos da Conect mudaram minha vida profissional. Consegui meu primeiro emprego apenas 2 semanas após a conclusão do curso de Rotinas Administrativas.",
@@ -12,7 +16,7 @@ const testimonials = [
   {
     name: "Paulo Mendes",
     role: "Técnico em Informática",
-    image: "./images/cat.jpg",
+    image: CatImage,
     rating: "★★★★★",
     testimonial:
       "A qualidade do ensino e a atenção dos professores são incomparáveis. Hoje trabalho em uma grande empresa de tecnologia graças ao curso de Manutenção de Computadores.",
@@ -20,7 +24,7 @@ const testimonials = [
   {
     name: "Carla Oliveira",
     role: "Recepcionista de Hotel",
-    image: "./images/carla.jpg",
+    image: CarlaImage,
     rating: "★★★★★",
     testimonial:
       "O curso de Hotelaria foi fundamental para meu crescimento profissional. Aprendi na prática como lidar com os desafios do dia a dia no setor hoteleiro.",
@@ -28,7 +32,7 @@ const testimonials = [
   {
     name: "Roberto Almeida",
     role: "Suporte Técnico",
-    image: "./images/roberto.jpg",
+    image: RobertoImage,
     rating: "★★★★☆",
     testimonial:
       "Depois do curso de Informática Básica, consegui me atualizar e voltar ao mercado de trabalho. A metodologia prática fez toda a diferença no meu aprendizado.",
@@ -43,7 +47,7 @@ export function CardsTestimonials() {
           key={index}
           className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6" data-aos="fade-up" data-aos-duration="800">
           <div className="flex items-center gap-4 mb-4">
-            <img
+            <Image
               src={testimonial.image}
               alt={testimonial.name}
               className="w-14 h-14 rounded-full object-cover border border-gray-300"

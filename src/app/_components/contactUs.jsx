@@ -2,6 +2,7 @@ import { Form } from "./form";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import WhatsAppIcon from "../../../public/images/whatsapp-theme-white.png";
 
 export function ContactUs() {
     return (
@@ -48,7 +49,7 @@ export function ContactUs() {
                         </div>
                         <div className="h-auto flex rounded-2xl gap-2 shadow-2xl m-4 p-4 bg-green-800">
                             <div className="pt-4">
-                                <img src="./images/whatsapp-theme-white.png" alt="Ícone do WhatsApp" className="w-[50px]"/>
+                                <Image src={WhatsAppIcon} alt="Ícone do WhatsApp" className="w-[50px]"/>
                             </div>
                             <div className="p-4 text-white">
                                 <h3 className="font-bold">Entre para nossa comunidade</h3>

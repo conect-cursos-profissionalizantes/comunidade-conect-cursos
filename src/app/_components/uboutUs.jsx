@@ -19,9 +19,9 @@ export function AboutUs() {
 
                 <div className="grid grid-cols-1 justify-items-center lg:grid-cols-2 gap-6 pt-6" data-aos="fade-up"  data-aos-duration="800">
                     <div data-aos="fade-up" data-aos-duration="800">
-                        <img
+                        <Image
                             src="./images/girl-using-computer.svg"
-                            alt="Garota usando um computador" className="w-[600px] h-[400px]"/>
+                            alt="Garota usando um computador" width={500} height={500}/>
                     </div>
                     <div data-aos="fade-up" data-aos-duration="800">
                         <h2 className="w-auto text-2xl">Referência em formação profissional há mais de 10 anos</h2>

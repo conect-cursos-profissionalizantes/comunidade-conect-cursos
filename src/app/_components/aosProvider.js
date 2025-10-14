@@ -1,10 +1,8 @@
-// app/components/AosProvider.js
+'use client'
 
-'use client';
-
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // Importe o CSS do AOS
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Importe o CSS do AOS
 
 export default function AosProvider({ children }) {
   useEffect(() => {
