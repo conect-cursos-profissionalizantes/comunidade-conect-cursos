@@ -36,7 +36,7 @@ export async function POST(request) {
         if (error instanceof EmailJSResponseStatus) {
             console.error('ERRO (EmailJS Status):', error.status, error.text);
             
-            // Retorno genérico para o cliente
+            // Retorno genérico para o cliente.
             return NextResponse.json({ 
                 message: 'Falha na comunicação com o servidor de e-mail. Verifique suas chaves.',
             }, { status: 500 });
@@ -45,7 +45,7 @@ export async function POST(request) {
         // 2. Trata outros erros de Runtime (Rede, Parsing, Código, etc.)
         console.error('ERRO FATAL NO SERVIDOR:', error);
         
-        // Retorno genérico, ocultando detalhes de erro interno
+        // Retorno genérico, ocultando detalhes de erro interno.
         return NextResponse.json({ 
             message: 'Erro interno no servidor ao processar sua requisição.',
         }, { status: 500 });
